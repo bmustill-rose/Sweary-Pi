@@ -11,7 +11,7 @@ try:
 except Exception as e:
   print("Error connecting to {}. {}".format(args.address, e))
   exit()
-print("Listening. Type a character or more and press enter or press control + c to quit")
+print("Connected to {}. Type a character or more and press enter or press control + c to quit".format(args.address))
 while True:
  for i in input(">"):
   ws.send(json.dumps({"name": i}))
